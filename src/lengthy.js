@@ -1,7 +1,7 @@
 const Parser = require('./parser')
 const Converter = require('./converter')
 
-module.exports = class Lengthy {
+module.exports = class Measures {
   from(string) {
     this.segments = new Parser().parse(string)
     return this

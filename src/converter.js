@@ -102,7 +102,7 @@ module.exports = class Converter {
   constructor(segments) {
     if (!Array.isArray(segments)) {
       throw new Error(`
-        Lengthy::Converter constructor() expect an array of segments as an argument.
+        Measures::Converter constructor() expect an array of segments as an argument.
         Received ${segments}
       `)
     }
@@ -122,7 +122,7 @@ module.exports = class Converter {
 
     if (!unit) {
       throw new Error(`
-        Lengthy::Converter cannot sum() with the unit ${unitName}
+        Measures::Converter cannot sum() with the unit ${unitName}
       `)
     }
 
@@ -152,7 +152,7 @@ module.exports = class Converter {
       let remainder = 0
 
       if (!unit) {
-        throw new Error(`Lengthy::Converter cannot convert to unknown unit ${unitName}`)
+        throw new Error(`Measures::Converter cannot convert to unknown unit ${unitName}`)
       }
 
       if (unitName !== currentUnitName) {

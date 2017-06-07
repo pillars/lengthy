@@ -1,10 +1,10 @@
 {
-  "name": "lengthy",
+  "name": "measures",
   "version": "0.1.0",
   "description": "Convert metric to imperial and vice versa",
-  "main": "dist/lengthy.umd.js",
-  "module": "dist/lengthy.es.js",
-  "repository": "https://github.com/pillars/lengthy",
+  "main": "dist/measures.umd.js",
+  "module": "dist/measures.es.js",
+  "repository": "https://github.com/pillars/measures",
   "author": "Karel Ledru-Mathe <karel@ledrumathe.com>",
   "license": "MIT",
   "keywords": [
@@ -13,7 +13,7 @@
     "string"
   ],
   "bugs": {
-    "url": "https://github.com/pillars/lengthy/issues"
+    "url": "https://github.com/pillars/measures/issues"
   },
   "scripts": {
     "build": "rollup -c",

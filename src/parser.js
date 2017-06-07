@@ -142,7 +142,7 @@ module.exports = class Parser {
   parse(string) {
     if (!string) {
       throw new Error(`
-        Lengthy::Parser constructor() expect a string as an argument.
+        Measures::Parser constructor() expect a string as an argument.
         Received ${string}
       `)
     }
@@ -176,7 +176,7 @@ module.exports = class Parser {
 
     if (!unit) {
       throw new Error(`
-        Lengthy::Parser could not guess unit of ${string}.
+        Measures::Parser could not guess unit of ${string}.
         Please pass the unit explicitly via the "unit" option.
       `)
     }
@@ -214,7 +214,7 @@ module.exports = class Parser {
 
     if (isNaN(value)) {
       throw new Error(`
-        Lengthy::Parser could not parse value of ${number}.
+        Measures::Parser could not parse value of ${number}.
         Please pass the unit explicitly via the "unit" option.
       `)
     }

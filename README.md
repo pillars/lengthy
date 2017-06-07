@@ -1,6 +1,6 @@
-# Lengthy [![Build Status](https://travis-ci.org/pillars/lengthy.svg?branch=master)](https://travis-ci.org/pillars/lengthy)
+# Measures [![Build Status](https://travis-ci.org/pillars/measures.svg?branch=master)](https://travis-ci.org/pillars/measures)
 
-I was born in France but live in Montreal. Construction in America relies a lot on the imperial mesuring system ([which makes me extremely sad](http://www.funnyjunk.com/Baby+steps+america/funny-pictures/5224677#744572_5224233)). I wanted a way to easily convert units on my website for readers that are only comfortable with one format. You can see the package at work at [karelledru.com](https://karelledru.com).
+Construction in America relies a lot on the imperial mesuring system ([which makes me extremely sad](http://www.funnyjunk.com/Baby+steps+america/funny-pictures/5224677#744572_5224233)). I wanted a way to easily convert units on my website for readers that are only comfortable with one format. You can see the package at work at [karelledru.com](https://karelledru.com).
 
 ## Features
 
@@ -20,26 +20,26 @@ Limitations:
 Install via yarn/npm:
 
 ```
-yarn add lengthy
+yarn add measures
 ```
 
 Or as a script tag:
 
 ```html
-<script src="lengthy.min.js"></script>
+<script src="measures.min.js"></script>
 ```
 
 And start using:
 
 ```js
-Lengthy.from('6ft 4in 1/2').to('m')
+Measures.from('6ft 4in 1/2').to('m')
 ```
 
 ## Api
 
 ### `from(string)`
 
-Lengthy can parse single units:
+Measures can parse single units:
 
 - `10cm`
 - `10 cm`
@@ -65,7 +65,7 @@ The supported units are:
 
 ### `to(stringOrArray)`
 
-Lengthy can convert a string to a single unit or multiple ones. You can use any of the units listed above. You can also add a precision (replace * with the unit you want):
+Measures can convert a string to a single unit or multiple ones. You can use any of the units listed above. You can also add a precision (replace * with the unit you want):
 
 - `*-round` will return the rounded value
 - `*-floor` will return the rounded value downwards to the closest integer
@@ -76,7 +76,7 @@ For inches, you might want to format it as fractions. You can do that with the p
 
 - `*-/n` where `n` is an integer in [2, 4, 8, 16, 32, 64]. So `*-/8` will return fraction where the denominator is 8 or less.
 
-Lengthy can parse any fraction you input but only returns an irreducible fraction up to a `/64` precision.
+Measures can parse any fraction you input but only returns an irreducible fraction up to a `/64` precision.
 
 ## MIT License
 

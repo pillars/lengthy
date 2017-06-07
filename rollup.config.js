@@ -3,10 +3,10 @@ import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 
 export default {
-  entry: 'src/lengthy.js',
-  dest: 'dist/lengthy.cjs.js',
+  entry: 'src/measures.js',
+  dest: 'dist/measures.cjs.js',
   format: 'cjs',
-  moduleName: 'lengthy',
+  moduleName: 'measures',
   sourceMap: 'inline',
   plugins: [
     resolve(),

@@ -56,13 +56,13 @@ module.exports = class Fractioner {
     const parts = fraction.split('/')
 
     if (parts.length !== 2) {
-      throw new Error(`Lengthy::Fractioner ${fraction} is not a valid fraction.`)
+      throw new Error(`Measures::Fractioner ${fraction} is not a valid fraction.`)
     }
 
     const result = Fractioner.parseNumber(parts[0]) / Fractioner.parseNumber(parts[1])
 
     if (isNaN(result)) {
-      throw new Error(`Lengthy::Fractioner could not parse ${fraction} into a number.`)
+      throw new Error(`Measures::Fractioner could not parse ${fraction} into a number.`)
     }
 
     return result
@@ -78,7 +78,7 @@ module.exports = class Fractioner {
 
     if (!value || value >= 1) {
       throw new Error(`
-        Lengthy::Fractioner::closest() expect a value that is exclusively
+        Measures::Fractioner::closest() expect a value that is exclusively
         between 0 and 1 as an argument.
       `)
     }
@@ -90,7 +90,7 @@ module.exports = class Fractioner {
       const validPrecisions = [2, 4, 8, 16, 32, 64]
       if (validPrecisions.indexOf(precision) < 0) {
         throw new Error(`
-          Lengthy::Fractioner::closest() precision must be in ${validPrecisions}.
+          Measures::Fractioner::closest() precision must be in ${validPrecisions}.
         `)
       }
 
