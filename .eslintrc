@@ -1,0 +1,5 @@
+{
+    "plugins": [
+        "cross-browser-compatibility-check"
+    ]
+}

@@ -12,7 +12,9 @@
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": ["compat"],
   "rules": {
+    "compat/compat": 2,
     "indent": [
       "error",
       2

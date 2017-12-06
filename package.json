@@ -2,8 +2,7 @@
   "name": "measures",
   "version": "0.1.0",
   "description": "Convert metric to imperial and vice versa",
-  "main": "dist/measures.umd.js",
-  "module": "dist/measures.es.js",
+  "main": "dist/measures.cjs.js",
   "repository": "https://github.com/pillars/measures",
   "author": "Karel Ledru-Mathe <karel@ledrumathe.com>",
   "license": "MIT",
@@ -20,6 +19,10 @@
     "dev": "rollup -c -w",
     "test": "rollup -c && mocha test/"
   },
+  "browserslist": {
+    "development": ["last 2 versions"],
+    "production": ["last 4 versions"]
+  },
   "devDependencies": {
     "babel-eslint": "6",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -28,6 +31,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.0.0",
     "eslint": "^3.19.0",
+    "eslint-plugin-compat": "^1.0.3",
     "mocha": "^3.4.2",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
