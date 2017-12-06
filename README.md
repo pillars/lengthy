@@ -2,6 +2,8 @@
 
 Construction in America relies a lot on the imperial mesuring system ([which makes me extremely sad](http://www.funnyjunk.com/Baby+steps+america/funny-pictures/5224677#744572_5224233)). I wanted a way to easily convert units on my website for readers that are only comfortable with one format. You can see the package at work at [karelledru.com](https://karelledru.com).
 
+DISCLAMER: This package is not really production ready. There is still quite some work needed. Use at your own risk but feel free to open tickets or PRs if you want to use/contribute.
+
 ## Features
 
 - Support fractions like `1/2"` (half an inch)
@@ -20,19 +22,14 @@ Limitations:
 Install via yarn/npm:
 
 ```
-yarn add measures
-```
-
-Or as a script tag:
-
-```html
-<script src="measures.min.js"></script>
+yarn global add measures
 ```
 
 And start using:
 
 ```js
-Measures.from('6ft 4in 1/2').to('m')
+Measures = require('measures')
+new Measures().from('6ft 4in 1/2').to('m')
 ```
 
 ## Api
@@ -42,9 +39,8 @@ Measures.from('6ft 4in 1/2').to('m')
 Measures can parse single units:
 
 - `10cm`
-- `10 cm`
 - `28 m`
-- `6' 4"`
+- `6 inches`
 
 As well as combined units and fractions:
 
@@ -72,7 +68,7 @@ Measures can convert a string to a single unit or multiple ones. You can use any
 - `*-ceil` will return the rounded value upwards to the closest integer
 - `*-n` where `n` is an integer (like `*-2`) will allow n decimal digit
 
-For inches, you might want to format it as fractions. You can do that with the precision:
+For inches, you might want to format it as a fraction. You can do that with the precision:
 
 - `*-/n` where `n` is an integer in [2, 4, 8, 16, 32, 64]. So `*-/8` will return fraction where the denominator is 8 or less.
 
@@ -89,4 +85,4 @@ Do what you want with this. Feel free to contribute, fork, love, hate...
 - Update the documentation if needed 
 - Make a PR with a description that gives as much context as possible
 
-**IMPORTANT**: I will not merge a PR without proper testing or documentation.
+**IMPORTANT**: I will not merge a PR without proper testing and documentation.
